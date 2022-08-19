@@ -1,0 +1,49 @@
+@import '../../styles/mixins';
+
+.header {
+  padding: 20px 20%;
+  background-color: skyblue;
+  font-family: sans-serif;
+  @include respond(laptop) {
+    @include flex($justify: space-between);
+  }
+
+  &__title{
+    font-weight: 700;
+    font-size: 22px;
+    margin-bottom: 10px;
+    @include respond(laptop) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__list {
+    @include respond(laptop) {
+      @include flex();
+    }
+  }
+
+  .item {
+    @include respond(laptop) {
+      margin-left: 10px;
+    }
+
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &__text {
+      margin: 0 5px;
+    }
+
+    &__title {
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    &__value {
+      font-weight: 700;
+    }
+  }
+}
