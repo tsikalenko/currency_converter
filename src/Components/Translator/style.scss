@@ -1,0 +1,17 @@
+@import "../../styles/mixins";
+
+.translator{
+  font-family: sans-serif;
+  margin: 20px auto;
+  max-width: 1000px;
+  @include respond(laptop) {
+    @include flex()
+  }
+  &__text{
+    font-size: 20px;
+    font-weight: 700;
+    @include respond(laptop) {
+      margin: 0 50px;
+    }
+  }
+}

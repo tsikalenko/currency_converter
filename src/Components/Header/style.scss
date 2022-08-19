@@ -1,19 +1,31 @@
 @import '../../styles/mixins';
 
 .header {
-  padding: 20px 20%;
   background-color: skyblue;
+  padding: 20px 0;
   font-family: sans-serif;
-  @include respond(laptop) {
-    @include flex($justify: space-between);
+
+  &__info{
+    margin: 0 auto;
+    max-width: 1000px;
+    @include respond(laptop) {
+      @include flex();
+    }
   }
 
   &__title{
+    font-weight: 700;
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+
+  &__subtitle{
     font-weight: 700;
     font-size: 22px;
     margin-bottom: 10px;
     @include respond(laptop) {
       margin-bottom: 0;
+      margin-right: 50px;
     }
   }
 
